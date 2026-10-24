@@ -852,3 +852,9 @@
 - Evidence findings: 8 initial literal suspects reviewed; 2 editorial phrases incorrectly styled as quotations rewritten as editorial prose/design inference; 6 legitimate identifier/timestamp false positives documented in ../validation.md.
 - Further completion work: refreshed index dates, metadata attribution and source inventory; compiled concept links now give every article an inbound link. No unresolved structural issue or unreferenced raw remains.
 - Scope: Every pre-handoff compiled source and all original article files reviewed; all newly terminal sources audited through source_ledger.py with actor codex-coordinator. Existing log content retained byte-for-byte as a prefix.
+
+## [2026-10-24] ingest | bb-lite: Smaller, Multiplayer bb Rewrite
+- Disposition: New; Update
+- Raw: raw/bb/get-bb-bb-lite.md
+- Updated: bb Architecture and Data Model
+- Recheck: Fetched the live README again; after heading normalization it matches the existing immutable README capture. Reused that raw packet without editing or duplicating it. Added a dedicated concept article emphasizing the source-reported smaller codebase, shared-server multiplayer and absence of private threads; updated the index and source inventory.

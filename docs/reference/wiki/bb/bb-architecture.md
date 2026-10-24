@@ -68,7 +68,7 @@ The request-aware handoff issue proposes transactional transfer of an unaccepted
 
 ## bb-lite is a separate multiplayer rewrite
 
-The bb-lite README describes a smaller rewrite with shared-server multiplayer and Pi/ACP as add-ons. Its projects, threads, environments and execution machines resemble bb’s vocabulary, but the product and architecture are distinct.
+The bb-lite README describes a smaller rewrite with shared-server multiplayer and Pi/ACP as add-ons. Its projects, threads, environments and execution machines resemble bb’s vocabulary, but the product and architecture are distinct. See [bb-lite: Smaller, Multiplayer bb Rewrite](bb-lite.md) for the source-reported code-size comparison, owner/member roles, presence and attribution. Its private machines restrict execution, not thread reading: everyone on the server can read every thread.
 
 > **Status: Disputed**
 > The open team-server request concerns get-bb/bb, whereas bb-lite explicitly claims multiplayer. This is a product-scope difference: bb-lite’s capability must not be silently attributed to the original bb server, nor should the original server’s reported limitations be used to deny bb-lite’s documented design.

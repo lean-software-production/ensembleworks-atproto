@@ -48,6 +48,7 @@ Compiled concepts and source-qualified findings for bb.
 
 | Article | Summary | Updated |
 |---------|---------|---------|
+| [bb-lite: Smaller, Multiplayer bb Rewrite](bb/bb-lite.md) | Smaller codebase than bb; shared-server users, roles, presence and attribution, but no private threads. | 2026-10-24 |
 | [bb Architecture and Data Model](bb/bb-architecture.md) | bb is an "agentic IDE" built from four runtime pieces: a central **server**, a **host daemon** on each execution machine, a web **app**, and the `bb` **CLI** with an SDK. | 2026-10-24 |
 | [bb Pi Provider Integration](bb/bb-pi-provider-integration.md) | bb ships a built-in **Pi** provider (`pi`). | 2026-10-24 |
 | [bb Plugin System](bb/bb-plugins.md) | bb plugins are on by default. | 2026-10-24 |

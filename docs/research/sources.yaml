@@ -3586,6 +3586,7 @@ sources:
     reason: null
     articles:
     - docs/reference/wiki/bb/bb-architecture.md
+    - docs/reference/wiki/bb/bb-lite.md
     history:
     - at: '2026-10-24T06:34:52Z'
       event: initialised
@@ -3616,6 +3617,13 @@ sources:
       articles:
       - docs/reference/wiki/bb/bb-architecture.md
       note: 'Completion audit: existing article and Raw association verified; full article/index/log inventory reconciled.'
+    - at: '2026-10-24T23:09:19Z'
+      event: compiled
+      by: codex-coordinator
+      articles:
+      - docs/reference/wiki/bb/bb-lite.md
+      - docs/reference/wiki/bb/bb-architecture.md
+      note: 'User-requested dedicated bb-lite article: smaller codebase and multiplayer. Live README re-fetched unchanged; reused immutable raw snapshot, preserved prior compilation history.'
     representation: verbatim
     license: MIT (Copyright 2026 Terragon Labs)
 - id: deepwiki-com-e77dbd56
