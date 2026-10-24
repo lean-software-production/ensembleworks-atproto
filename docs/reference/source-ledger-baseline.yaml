@@ -1,0 +1,608 @@
+# Sources cited in the research reports under docs/research/reports.
+# Generated from literal http(s) URLs; ids are host slug + sha256(url)[:8].
+version: 1
+sources:
+  - id: "atproto-com-95cd0853"
+    url: "https://atproto.com/blog/atproto-spaces-alpha"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [587]
+  - id: "github-com-eb49d079"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/session-format.md"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [588]
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [396]
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [561]
+  - id: "pi-ubitools-com-b65e1c1e"
+    url: "https://pi.ubitools.com/extensions/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [589]
+  - id: "hochej-github-io-761277c4"
+    url: "https://hochej.github.io/pi-mono/coding-agent/extensions/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [590]
+  - id: "github-com-e804abb2"
+    url: "https://github.com/get-bb/bb/blob/main/docs/configuration.md"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [591]
+  - id: "github-com-e330fcff"
+    url: "https://github.com/get-bb/bb/blob/main/docs/system-overview.md"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [592]
+  - id: "github-com-d9580edb"
+    url: "https://github.com/Diffuzmetall/bb-plugin-pi-command-sync"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [593]
+  - id: "github-com-5afd3d54"
+    url: "https://github.com/regutierrez/traicr/issues/37"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [594]
+  - id: "github-com-8d278711"
+    url: "https://github.com/get-bb/bb/issues/3621"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [595]
+  - id: "github-com-18d4c7e7"
+    url: "https://github.com/get-bb/bb/pull/5522"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [596]
+  - id: "github-com-5296c7a0"
+    url: "https://github.com/get-bb/bb"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [597]
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [398]
+  - id: "getbb-app-2b11c170"
+    url: "https://getbb.app/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [598]
+  - id: "getbb-app-d83bf031"
+    url: "https://getbb.app/plugin-guide"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [599]
+  - id: "developersdigest-tech-766342b2"
+    url: "https://www.developersdigest.tech/blog/pi-deep-dive-agent-toolkit-architecture"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [600]
+  - id: "hoangyell-com-fc5d650d"
+    url: "https://hoangyell.com/pi-agent-setup-best-practices/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [601]
+  - id: "github-com-e1f8586d"
+    url: "https://github.com/auryan898/pi-dev/blob/main/packages/coding-agent/docs/sessions.md"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [602]
+  - id: "gist-github-com-3490aecc"
+    url: "https://gist.github.com/rajeshpv/eccc1dc8d70e8cdcf948de3312ca111f"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [603]
+  - id: "atproto-com-39b44f38"
+    url: "https://atproto.com/guides/data-validation"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [604]
+  - id: "atproto-com-4c1bf70e"
+    url: "https://atproto.com/blog/pds-customization-and-metrics"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [605]
+  - id: "github-com-75d44129"
+    url: "https://github.com/qjoly/mise-tangled"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [606]
+  - id: "github-com-f4b2a54b"
+    url: "https://github.com/bluesky-social/atproto/issues/3392"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [607]
+  - id: "pkg-go-dev-d9e5f23a"
+    url: "https://pkg.go.dev/github.com/haileyok/cocoon/oauth/scopes"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [608]
+  - id: "github-com-63e83827"
+    url: "https://github.com/bluesky-social/atproto/discussions/1740"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [609]
+  - id: "github-com-e8add5ad"
+    url: "https://github.com/bluesky-social/atproto/discussions/4832"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [610]
+  - id: "github-com-f502489b"
+    url: "https://github.com/AlohaSocial/social/pull/2542"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [611]
+  - id: "atproto-com-dd09ccb9"
+    url: "https://atproto.com/specs/permission"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [612]
+  - id: "github-com-166b4b35"
+    url: "https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [613]
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [394]
+  - id: "news-ycombinator-com-1230c30c"
+    url: "https://news.ycombinator.com/item?id=49379732"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [614]
+  - id: "atproto-com-7ea438be"
+    url: "https://atproto.com/blog/atmospheric-groups-intro"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [615]
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [395]
+  - id: "github-com-86b2d368"
+    url: "https://github.com/socialdept/atp-spaces"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [616]
+  - id: "danielmangum-com-8c71a1e5"
+    url: "https://danielmangum.com/posts/this-website-is-hosted-on-bluesky/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [617]
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [563]
+  - id: "discourse-atmosphere-community-e562ab1e"
+    url: "https://discourse.atmosphere.community/t/early-permissioned-data-proposal-draft-feedback/923"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [618]
+  - id: "github-com-57192d8f"
+    url: "https://github.com/karanshukla/kodamachi/issues/228"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [619]
+  - id: "github-com-a81e3dd9"
+    url: "https://github.com/bluesky-social/proposals/pull/115"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [620]
+  - id: "github-com-47a47b9a"
+    url: "https://github.com/ewanc26/wolfram/issues/35"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [621]
+  - id: "brittanyellich-com-f3973d91"
+    url: "https://brittanyellich.com/atproto-groups/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [622]
+  - id: "discourse-atmosphere-community-94a67efd"
+    url: "https://discourse.atmosphere.community/t/proposal-wg-for-group-community-standards-and-infrastructure-in-atproto/745"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [623]
+  - id: "discourse-atmosphere-community-afacef81"
+    url: "https://discourse.atmosphere.community/t/arbiter-group-management-for-permissioned-spaces/750"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [624]
+  - id: "github-com-8bd3b1d8"
+    url: "https://github.com/bluesky-social/proposals/pull/94"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [625]
+  - id: "flaviocopes-com-d126e1f4"
+    url: "https://flaviocopes.com/bb-agentic-ide/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [626]
+  - id: "github-com-205bad1b"
+    url: "https://github.com/VladimirGVP/bb-plugin-provider-pi-durable"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [627]
+  - id: "github-com-04193fd3"
+    url: "https://github.com/jgarrow-springhealth/bb-plugin-pi-usage"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [628]
+  - id: "arize-com-781cc2d9"
+    url: "https://arize.com/docs/phoenix/tracing/how-to-tracing/importing-and-exporting-traces/importing-atif-trajectories"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [629]
+  - id: "infoq-com-2a5dd8ce"
+    url: "https://www.infoq.com/news/2026/02/agent-trace-cursor/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [630]
+  - id: "github-com-e5531103"
+    url: "https://github.com/cursor/agent-trace/blob/main/README.md"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [631]
+  - id: "docs-harborframework-com-153b1451"
+    url: "https://docs.harborframework.com/core-concepts/agents/atif"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [632]
+  - id: "github-com-94399583"
+    url: "https://github.com/ChristopherDavenport/agentimport/pull/11"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [633]
+  - id: "github-com-2c523449"
+    url: "https://github.com/yzhao062/agentpile"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [634]
+  - id: "comet-com-c854c2b8"
+    url: "https://www.comet.com/docs/opik/integrations/harbor"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [635]
+  - id: "github-com-e2d2ed95"
+    url: "https://github.com/open-telemetry/semantic-conventions-genai/issues/338"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [636]
+  - id: "github-com-b616f6ba"
+    url: "https://github.com/0xSero/pi-acp"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [637]
+  - id: "github-com-d36e37f9"
+    url: "https://github.com/svkozak/pi-acp"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [638]
+  - id: "skillsdirectory-com-ec6e5dc4"
+    url: "https://www.skillsdirectory.com/skills/get-bb-bb-plugin-authoring"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [639]
+  - id: "piagent-fyi-2cda8bf9"
+    url: "https://piagent.fyi/guides/extensions-101/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [640]
+  - id: "pi-dev-20151f56"
+    url: "https://pi.dev/docs/latest/extensions"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [641]
+  - id: "lobehub-com-e54b3abb"
+    url: "https://lobehub.com/skills/kanatti-pipi-pi-extension-dev"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [642]
+  - id: "deepwiki-com-63ef501b"
+    url: "https://deepwiki.com/earendil-works/pi/2.3-session-management-and-compaction"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [643]
+  - id: "pi-dev-97d4df2f"
+    url: "https://pi.dev/docs/latest/usage"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [644]
+  - id: "pi-dev-8071d281"
+    url: "https://pi.dev/docs/latest/sessions"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [645]
+  - id: "github-com-53069978"
+    url: "https://github.com/gpxl-dev/pi-share-slice"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [646]
+  - id: "piagent-fyi-e83328b4"
+    url: "https://piagent.fyi/guides/sessions-and-history/"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [647]
+  - id: "npmx-dev-ed475a90"
+    url: "https://npmx.dev/package/@earendil-works/pi-coding-agent/v/%3E=0.74.0"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [648]
+  - id: "getbb-app-c453d492"
+    url: "https://getbb.app/changelog"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [649]
+  - id: "github-com-6fe2a7e0"
+    url: "https://github.com/get-bb/marketplace/pull/410"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [650]
+  - id: "github-com-a3bee95d"
+    url: "https://github.com/get-bb/bb/issues/4214"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [651]
+  - id: "github-com-165ac9a9"
+    url: "https://github.com/get-bb/bb/issues/5254"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [652]
+  - id: "github-com-f8ee379f"
+    url: "https://github.com/get-bb/bb/issues/5080"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [653]
+  - id: "github-com-572fe878"
+    url: "https://github.com/get-bb/bb/issues/5350"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [654]
+  - id: "github-com-3b31c6c9"
+    url: "https://github.com/get-bb/bb/issues/1668"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [655]
+  - id: "github-com-9906b15c"
+    url: "https://github.com/get-bb/bb/issues/5552"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [656]
+  - id: "github-com-5ca059fa"
+    url: "https://github.com/get-bb/bb/issues/4809"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [657]
+  - id: "ar5iv-labs-arxiv-org-77d0c524"
+    url: "https://ar5iv.labs.arxiv.org/html/2307.00714"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [658]
+  - id: "news-ycombinator-com-fd9dbb91"
+    url: "https://news.ycombinator.com/item?id=45543899"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [659]
+  - id: "github-com-8afdd6ea"
+    url: "https://github.com/get-bb/bb-lite"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [660]
+  - id: "deepwiki-com-e77dbd56"
+    url: "https://deepwiki.com/earendil-works/pi/6.1-extension-api-and-lifecycle-events"
+    references:
+      - report: "docs/research/reports/Social Coding for the AI Age_ ATProto Session Sharing Pre-Build Research.md"
+        lines: [661]
+  - id: "atproto-com-bab0dccc"
+    url: "https://atproto.com/specs/repository"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [389]
+  - id: "atproto-com-2b060be9"
+    url: "https://atproto.com/specs/blob"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [390]
+  - id: "atproto-com-f96c647c"
+    url: "https://atproto.com/specs/lexicon"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [391]
+  - id: "atproto-com-727556b2"
+    url: "https://atproto.com/specs/sync"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [392]
+  - id: "atproto-com-248b986a"
+    url: "https://atproto.com/specs/oauth"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [393]
+  - id: "github-com-f46c40d8"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/examples/extensions/send-user-message.ts"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [397]
+  - id: "github-com-c6bac58c"
+    url: "https://github.com/get-bb/bb/blob/main/package.json"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [398]
+  - id: "github-com-d261b7d9"
+    url: "https://github.com/agentclientprotocol/agent-client-protocol"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [399]
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [572]
+  - id: "github-com-1f9a6ffe"
+    url: "https://github.com/modelcontextprotocol/modelcontextprotocol"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [400]
+  - id: "github-com-79c78ff0"
+    url: "https://github.com/a2aproject/A2A"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [401]
+  - id: "github-com-e45dc2c9"
+    url: "https://github.com/open-telemetry/semantic-conventions-genai"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [402]
+  - id: "github-com-e1bb4170"
+    url: "https://github.com/openai/codex/blob/main/codex-rs/rollout/src/recorder.rs"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [403]
+  - id: "github-com-8404d2a7"
+    url: "https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/session-management.md"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [404]
+  - id: "github-com-665d58af"
+    url: "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/main/2026/README.md"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [405]
+  - id: "simonwillison-net-c11eb705"
+    url: "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [406]
+  - id: "blog-tangled-org-3e37b291"
+    url: "https://blog.tangled.org/intro/"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [407]
+  - id: "germnetwork-com-74e45a84"
+    url: "https://www.germnetwork.com/blog/integrating-germ-atproto"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [408]
+  - id: "arxiv-org-75e0bb2c"
+    url: "https://arxiv.org/abs/2402.03239"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [409]
+  - id: "arxiv-org-2f7327c6"
+    url: "https://arxiv.org/abs/2506.04785"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [410]
+  - id: "drops-dagstuhl-de-9096ab57"
+    url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESEM.2026.93"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [411]
+  - id: "doi-org-342d0a08"
+    url: "https://doi.org/10.1145/3771937"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [412]
+  - id: "arxiv-org-1256fd2c"
+    url: "https://arxiv.org/abs/2608.02329"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [413]
+  - id: "edpb-europa-eu-f768f345"
+    url: "https://www.edpb.europa.eu/documents/guideline/guidelines-022025-on-processing-of-personal-data-through-blockchain_en"
+    references:
+      - report: "docs/research/reports/deep-research-report.md"
+        lines: [414]
+  - id: "github-com-53d738ab"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [559]
+  - id: "github-com-6da4af17"
+    url: "https://github.com/get-bb/bb/blob/main/packages/bb-app/README.md"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [560]
+  - id: "github-com-a4f4f779"
+    url: "https://github.com/bluesky-social/proposals/blob/main/0016-permissioned-data/README.md"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [562]
+  - id: "github-com-45888296"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/extensions.md"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [564]
+  - id: "outstand-so-f67b4c56"
+    url: "https://www.outstand.so/blog/bluesky-api"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [565]
+  - id: "upload-post-com-a5821d3a"
+    url: "https://www.upload-post.com/bluesky-api/"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [566]
+  - id: "skillsdirectory-com-91421647"
+    url: "https://www.skillsdirectory.com/skills/yanacuti1121-implementing-secrets-scanning-in-ci-cd"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [567]
+  - id: "upvote-at-f6d5ef2f"
+    url: "https://upvote.at/"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [568]
+  - id: "semble-so-9102aee3"
+    url: "https://semble.so/profile/bmann.ca/collections/3meei47mfkb2d?ref=feed"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [569]
+  - id: "github-com-3add5ba4"
+    url: "https://github.com/get-bb/bb/pulls"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [570]
+  - id: "github-com-eda01a0c"
+    url: "https://github.com/get-bb/bb/issues/1573"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [571]
+  - id: "agentclientprotocol-com-cdf92af9"
+    url: "https://agentclientprotocol.com/get-started/introduction"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [573]
+  - id: "opentelemetry-io-e1038c58"
+    url: "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai/"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [574]
+  - id: "openobserve-ai-f4701cc2"
+    url: "https://openobserve.ai/blog/opentelemetry-genai-semantic-conventions/"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [575]
+  - id: "github-com-9c7c725a"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [576]
+  - id: "github-com-e1ac19f4"
+    url: "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/examples/sdk/06-extensions.ts"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [577]
+  - id: "github-com-c0efbb5e"
+    url: "https://github.com/get-bb/bb/blob/main/LICENSE"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [578]
+  - id: "github-com-6a4b9ecc"
+    url: "https://github.com/get-bb/bb/blob/main/packages/plugin-sdk/README.md"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [579]
+  - id: "github-com-a83ba21f"
+    url: "https://github.com/earendil-works/pi/issues/1781"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [580]
+  - id: "tangled-org-c7d1e5af"
+    url: "https://tangled.org/"
+    references:
+      - report: "docs/research/reports/ATProto Social Coding Research.txt"
+        lines: [581]

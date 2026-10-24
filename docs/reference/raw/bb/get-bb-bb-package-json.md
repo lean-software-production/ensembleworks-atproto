@@ -1,0 +1,142 @@
+# get-bb/bb: package.json
+
+> Source: https://github.com/get-bb/bb/blob/main/package.json
+> Resolved: https://raw.githubusercontent.com/get-bb/bb/main/package.json
+> Collected: 2026-10-23
+> Published: Unknown
+> Retrieval: HTTP GET, 2026-10-23; mode github-blob; 3 response(s) archived in build/reference-wiki/http/github-com-c6bac58c/ (git-ignored): build/reference-wiki/http/github-com-c6bac58c/004.txt (HTTP 200, sha256 1df410672e77), build/reference-wiki/http/github-com-c6bac58c/005.json (HTTP 200, sha256 bffa7f29b2ca), build/reference-wiki/http/github-com-c6bac58c/006.json (HTTP 200, sha256 221583e2189c)
+> Extraction: Verbatim file content (raw file at ref `main`; latest commit touching path: 2a7822782b55a385b517a51839b9238a6b8a148f).
+> Representation: Verbatim extraction of the source text (formatting noise removed)
+> License: MIT — get-bb/bb LICENSE file (MIT License)
+> Attribution: Copyright (c) 2026 Michael Yong, bb
+
+```json
+{
+  "name": "bb",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "prepare": "turbo run generate:templates generate:plugin-scaffold generate generate:bb-official-marketplace --filter=@bb/templates --filter=@bb/plugin-build --filter=@bb/server --output-logs=errors-only --summarize=false",
+    "scripts:prepare": "pnpm exec turbo run build --filter=@bb/scripts --output-logs=none --log-prefix=none --summarize=false",
+    "cli:prepare": "pnpm exec turbo run build --filter=@bb/scripts --filter=@bb/cli --output-logs=none --log-prefix=none --summarize=false",
+    "ensure-native-modules": "node scripts/ensure-native-modules.mjs",
+    "dev": "node scripts/ensure-native-modules.mjs && cross-env NODE_ENV=development dotenv --no-expand -c development -- node --conditions=source --import tsx packages/scripts/src/commands/run-dev.ts",
+    "start": "cross-env NODE_ENV=production dotenv --no-expand -c production -- node --conditions=source --import tsx scripts/start-bb.mjs",
+    "start:worktree": "cross-env NODE_ENV=development dotenv --no-expand -c development -- node --conditions=source --import tsx packages/scripts/src/commands/run-dev.ts --worktree",
+    "start:worktree-remote": "cross-env BB_SERVER_BIND_HOST=0.0.0.0 pnpm run start:worktree",
+    "desktop": "cross-env NODE_ENV=production dotenv --no-expand -c production -- node --conditions=source --import tsx packages/scripts/src/commands/run-desktop.ts",
+    "desktop:worktree": "cross-env NODE_ENV=development dotenv --no-expand -c development -- node --conditions=source --import tsx packages/scripts/src/commands/run-desktop.ts --worktree",
+    "mobile:apk:dev": "pnpm exec turbo run build:android:dev --filter=@bb/mobile",
+    "dev:remote": "cross-env BB_DEV_APP_HOST=0.0.0.0 BB_SERVER_BIND_HOST=0.0.0.0 pnpm run dev",
+    "cloud:dev": "node --conditions=source --import tsx scripts/bb-cloud-dev.mjs",
+    "dev:restart": "cross-env NODE_ENV=development node --conditions=source --import tsx packages/scripts/src/commands/request-dev-restart.ts both",
+    "dev:restart-server": "cross-env NODE_ENV=development node --conditions=source --import tsx packages/scripts/src/commands/request-dev-restart.ts server",
+    "dev:restart-host-daemon": "cross-env NODE_ENV=development node --conditions=source --import tsx packages/scripts/src/commands/request-dev-restart.ts host-daemon",
+    "dev:host-daemon": "cross-env NODE_ENV=development dotenv --no-expand -c development -- node --conditions=source --import tsx packages/scripts/src/commands/run-host-daemon.ts",
+    "build": "turbo run build --filter=@bb/scripts --filter=@bb/app --filter=@bb/server --filter=@bb/host-daemon --filter=@bb/cli --filter=bb-app",
+    "bb-app:prepare": "turbo run build --filter=bb-app --output-logs=none --log-prefix=none --summarize=false",
+    "start:host-daemon": "cross-env NODE_ENV=production dotenv --no-expand -c production -- pnpm run --silent bb-app:prepare && cross-env NODE_ENV=production dotenv --no-expand -c production -- node packages/bb-app/dist/bb-app.js host-daemon",
+    "seed:perf": "node scripts/ensure-native-modules.mjs && cross-env NODE_ENV=development node --conditions=source --import tsx packages/scripts/src/commands/seed-perf-db.ts",
+    "parity": "pnpm --filter @bb/provider-parity run parity",
+    "reset": "cross-env NODE_ENV=production pnpm run --silent scripts:prepare && cross-env NODE_ENV=production node packages/scripts/dist/commands/reset-bb-data.js",
+    "reset:dev": "cross-env NODE_ENV=development pnpm run --silent scripts:prepare && cross-env NODE_ENV=development node packages/scripts/dist/commands/reset-bb-data.js",
+    "reset:all": "cross-env NODE_ENV=production pnpm run --silent scripts:prepare && cross-env NODE_ENV=production node packages/scripts/dist/commands/reset-bb-data.js --all",
+    "clean": "turbo run clean",
+    "codemod:remove-typescript-comments": "node scripts/remove-typescript-comments.mjs",
+    "format": "oxfmt .",
+    "format:check": "oxfmt . --check",
+    "storybook": "turbo run storybook --filter=@bb/app",
+    "lint": "turbo run lint",
+    "check:plugin-forks": "node scripts/check-plugin-forks.mjs",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:integration": "turbo run test:integration",
+    "qa:standalone:start": "node tests/qa/scripts/run-root-command.mjs standalone:start",
+    "qa:standalone:stop": "node tests/qa/scripts/run-root-command.mjs standalone:stop",
+    "qa:standalone:cleanup": "node tests/qa/scripts/run-root-command.mjs standalone:cleanup",
+    "codex:archive-tmp-bb-sessions": "pnpm run --silent scripts:prepare && node packages/scripts/dist/commands/archive-codex-tmp-bb-sessions.js",
+    "bb": "cross-env NODE_ENV=production pnpm run --silent cli:prepare 1>&2 && cross-env NODE_ENV=production node packages/scripts/dist/commands/run-cli.js",
+    "bb:dev": "cross-env NODE_ENV=development node --conditions=source --import tsx packages/scripts/src/commands/run-cli.ts",
+    "server": "pnpm --filter @bb/server start",
+    "drizzle-studio": "cross-env NODE_ENV=development pnpm --filter @bb/db db:studio",
+    "drizzle-studio:prod": "cross-env NODE_ENV=production pnpm --filter @bb/db db:studio"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.1.1",
+    "@vitest/utils": "4.1.1",
+    "cross-env": "^10.1.0",
+    "dotenv-cli": "^11.0.0",
+    "esbuild": "^0.28.0",
+    "http-proxy-3": "^1.23.2",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "rimraf": "^6.1.0",
+    "tsrs": "0.18.0-ts7.1.0-dev.20260929",
+    "tsx": "^4.23.1",
+    "turbo": "^2.10.12",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "vitest": "^4.1.1"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current"
+      ],
+      "cpu": [
+        "arm64",
+        "x64"
+      ]
+    },
+    "overrides": {
+      "zod": "4.6.5",
+      "@expo/metro-config>lightningcss": "1.30.1"
+    },
+    "patchedDependencies": {
+      "app-builder-lib@26.15.7": "patches/app-builder-lib@26.15.7.patch",
+      "expo-modules-jsi@57.0.4": "patches/expo-modules-jsi@57.0.4.patch",
+      "oniguruma-to-es@4.3.4": "patches/oniguruma-to-es@4.3.4.patch",
+      "@pierre/diffs@1.2.9": "patches/@pierre__diffs@1.2.9.patch",
+      "sonner@1.7.4": "patches/sonner@1.7.4.patch",
+      "@react-native-cookies/cookies@6.2.1": "patches/@react-native-cookies__cookies@6.2.1.patch",
+      "react-native-screens@4.26.2": "patches/react-native-screens@4.26.2.patch",
+      "@hugeicons/react-native@1.0.15": "patches/@hugeicons__react-native@1.0.15.patch",
+      "react-native-webview@13.16.1": "patches/react-native-webview@13.16.1.patch",
+      "@tiptap/extension-blockquote@3.26.0": "patches/@tiptap__extension-blockquote@3.26.0.patch",
+      "@better-auth/api-key@1.6.23": "patches/@better-auth__api-key@1.6.23.patch",
+      "mermaid@11.15.0": "patches/mermaid@11.15.0.patch"
+    }
+  }
+}
+```
+
+
+## License notice (verbatim, from https://raw.githubusercontent.com/get-bb/bb/main/LICENSE)
+
+```
+MIT License
+
+Copyright (c) 2026 Michael Yong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```

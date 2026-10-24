@@ -1,0 +1,72 @@
+# An Intro to Atmospheric Groups - AT Protocol
+
+> Source: https://atproto.com/blog/atmospheric-groups-intro
+> Collected: 2026-10-23
+> Published: Unknown
+> Retrieval: HTTP GET, 2026-10-23; mode html; 1 response(s) archived in build/reference-wiki/http/atproto-com-7ea438be/ (git-ignored): build/reference-wiki/http/atproto-com-7ea438be/002.html (HTTP 200, sha256 11a0518bec95)
+> Extraction: Main content extracted from HTML with BeautifulSoup + markdownify; scripts, navigation and footer chrome removed.
+> Representation: Verbatim extraction of the source text (formatting noise removed)
+> License: CC-BY-4.0 — atproto.com page footer "(CC-BY) Bluesky Social PBC"; bluesky-social/atproto-website LICENSE.txt: docs and blog posts under CC-BY (version unstated)
+> Attribution: Bluesky Social PBC and Contributors, AT Protocol website
+
+Hot on the heels of our first [Devex Goals for Spaces](https://atproto.com/blog/devex-goals-for-spaces) blog post last week, I want to talk this week about the atmospheric group spec that the ecosystem has been working on. This post will see it in action in an existing atproto app (Grain), and over the coming weeks we’ll describe the fuller vision for an interoperating network of atmospheric groups.
+
+The [opensocial.group proposal](https://tangled.org/opensocial.group/proposal/) is a community effort to standardize what a group looks like on top of Spaces, and it starts from a short definition: “An atmospheric group is a DID with a bunch of permissioned spaces under it.” Because the group has its own DID, no individual member’s account has to own it. Like atproto accounts, groups can migrate across hosts.
+
+More importantly, **you can use the same groups across applications,** the same way you can use your atproto account across applications. In other words, if you create a group in an app that supports a particular modality — event scheduling, real-time communication, promotional comms — you can use that exact same group in another app, without having to recreate it, re-invite everybody, or repeat other social maintenance.
+
+We’re really stoked on this ecosystem standard and want to show off what we’ve been working on related to it. We are here to make Open Social Groups take root online. We’re going to feature several different apps that have so far added support for Spaces, and show off what that UX looks like so far.
+
+## [Open Social Group Patterns](#open-social-group-patterns)
+
+First is [grain.social](https://grain.social/), a photo sharing app in the Atmosphere.
+
+The Grain homepage UX is what you’d expect from photo sharing — you get a feed of recent public posts. But if you check out this “Groups” tab from the sidebar, you’ll see a list of Groups that have been created with the [opensocial.group protocol spec](https://tangled.org/opensocial.group/proposal/):
+
+Nice! These “Rainshadow Riders” look interesting — I’d love to try joining that group. You can use this today if you’re a [spaces-enabled PDS](https://bsky.network/account); I’m already logged into Grain that way. I can click through, and find out that this is a private group, so I request to join.
+
+At some point, one of the Rainshadow Riders admins will see my request, and be able to approve it, allowing me to access the Spaces records in this group. I’m impatient, though, so in the meantime I’m going to make my own group too! And did I mention **delving** earlier?
+
+Welcome to the Democratic Assembly of Mole People.
+
+After creating my own group (something I am democratically allowed to do, after all, because it’s just writing records to my PDS!), I upload a picture of Moleman, our leader.
+
+I can now look at the group’s landing page and see that I am a member, and that there is one contribution to the space, from me: the picture of Moleman.
+
+Now let’s take a look at that Space from across the Atmosphere.
+
+## [Using Spaces across Apps](#using-spaces-across-apps)
+
+Next we’ll take a look at the same Space from within [pdsls](https://pdsls.dev/), the atproto data browser.
+
+If we start by looking up my newly-created [space-racer](https://pdsls.dev/at://did:plc:hpdmvjxcaaru2polgj6aiql2) demo account on pdsls, we don’t find any records — because the only atproto records I’ve actually written from this account are behind Spaces, which are auth gated.
+
+So we’ll use the login button at the top right of the pdsls interface to trigger an auth flow. This now includes a prompt to optionally grant pdsls access to Spaces operations as well:
+
+Which, in turn, gets raised by the OAuth page served by the PDS hosting this demo account, letting us know that we’re granting Spaces (non-public data!) permissions to pdsls.
+
+With that, we can then browse to Spaces records from this account, where we find the **grain.social** Lexicons, as well as **opensocial.fyi**.
+
+Both of these were written by Grain when I created a new group and uploaded a photo; the **grain.social** record is the Grain upload itself, whereas the **opensocial.fyi** record (an early revision of opensocial.group) is the group standard.
+
+First, we can take a look at that Grain record, to find that it looks quite a bit like a Bluesky post with an attached image blob — nice to see Moleman again here.
+
+Finally, we’ll look at who has written into the group’s Grain space, to see what that tells us about how an Open Social Group is put together.
+
+## [Writer Sets for Groups](#writer-sets-for-groups)
+
+Here’s the Writers tab for the `social.grain.group` space:
+
+The header shows the three values that identify a space: a space type (`social.grain.group`), a space key (`self`), and a space authority, which here is `democratic-assembl.opensocial.fyi`. That authority is the group itself. Creating the Democratic Assembly of Mole People also created a new DID for the group, and if you [resolve it](https://plc.directory/did:plc:6da5m4pvpx5xnakwmw7kesmd), you’ll find an ordinary atproto account hosted at opensocial.fyi.
+
+The two entries in the list are the space’s **writer set**: the accounts whose repos hold data in this space. One is my space-racer account, which wrote the Moleman photo. The other is the group’s own DID. Apps use the writer set to build a view of the group. Grain doesn’t get Moleman from opensocial.fyi. It asks the group’s host which repos exist in the space, then syncs each one directly from wherever it lives: my photo from my PDS, and the group’s own records from opensocial.fyi. A group with a thousand active members is a thousand space repos spread across the PDSes those members use. The group host tracks which repos exist and routes write notifications, but doesn’t hold its members’ records.
+
+## [Space Architecture](#space-architecture)
+
+The proposed spec provides a way to generically structure a group, while letting other apps and other modalities extend it. Two spaces describe the group itself: a `meta` space with the group’s profile and rules, which many groups will make publicly readable, and a `members` space with the member list, roles, and an index of the group’s other spaces. Every other app or modality gets its own space under the same DID. Grain’s `social.grain.group` space is one of these. If the Mole People later wanted to organize events, an events app could add its own space under the group DID and use the same members and roles that Grain does.
+
+You can see the members side of this in the Spaces listing from earlier, where my account also has a repo in a `fyi.opensocial.members` space under the group DID. The proposal defines membership in both directions: the group writes a `membership` record granting a member their roles, and the member writes an `acceptance` record in the same space.
+
+Permissions in the proposal are flat role-based access control. A group defines roles, assigns one or more to each member, and roles have access to different actions. Each space has an `access` record listing which roles can read, and the group host enforces that when it issues space credentials. Rules about who can write to a space, post to an announcements channel, or pin a thread are left to each app’s own Lexicons, which can still refer to the group’s roles. Some records need to come from the group DID itself, like a pinned post at the top of a forum. For this, the group host also acts as an OAuth authorization server for the group DID. An admin signs in with their own account and receives a credential scoped to what their roles allow, so nobody has to share a password for the group account.
+
+The [opensocial.group proposal](https://tangled.org/opensocial.group/proposal/blob/main/proposal.md) is the place to follow along and give feedback on the group model, and the [Spaces proposal](https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data) covers the protocol underneath it. We’ll have more examples of apps building on Atmospheric Groups in the coming weeks!
