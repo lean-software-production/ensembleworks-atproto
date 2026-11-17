@@ -1,0 +1,15 @@
+{
+  "name": "@ensemble/transport",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@atproto/space": "0.0.0-spaces-alpha-20261113224550",
+    "@atproto/crypto": "0.0.0-spaces-alpha-20261113224550"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit --target es2023 --module nodenext --allowImportingTsExtensions --strict src/*.ts test/*.ts"
+  }
+}

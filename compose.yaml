@@ -1,0 +1,58 @@
+name: ensembleworks-prototype
+services:
+  postgres:
+    image: postgres:16.11-alpine
+    environment:
+      POSTGRES_USER: plc
+      POSTGRES_PASSWORD: local-prototype-only
+      POSTGRES_DB: plc
+    volumes: ["plc-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plc"]
+      interval: 2s
+      retries: 30
+  plc:
+    build: {context: ., dockerfile: infra/Dockerfile}
+    environment:
+      DATABASE_URL: postgres://plc:local-prototype-only@postgres:5432/plc
+    depends_on:
+      postgres: {condition: service_healthy}
+    ports: ["127.0.0.1:2582:2582"]
+  pds-init:
+    image: node:24.11.1-bookworm-slim
+    user: root
+    command: ["chown", "-R", "1000:1000", "/pds"]
+    volumes: ["pds-data:/pds"]
+  pds:
+    platform: linux/amd64
+    image: ghcr.io/bluesky-social/atproto@sha256:70073bb96e55cfd967af0a10fcade42f0c85c1c372c81a61ee3f32601d14a741
+    env_file: .local/pds.env
+    environment:
+      PDS_HOSTNAME: localhost
+      PDS_PORT: 2583
+      PDS_DEV_MODE: 'true'
+      PDS_DISABLE_SSRF_PROTECTION: 'true'
+      PDS_DID_PLC_URL: http://plc:2582
+      PDS_DATA_DIRECTORY: /pds
+      PDS_BLOBSTORE_DISK_LOCATION: /pds/blobs
+      PDS_INVITE_REQUIRED: 'false'
+      PDS_SERVICE_HANDLE_DOMAINS: .test
+      PDS_CRAWLERS: ''
+    volumes: ["pds-data:/pds"]
+    ports: ["127.0.0.1:2583:2583"]
+    depends_on:
+      plc: {condition: service_started}
+      pds-init: {condition: service_completed_successfully}
+  feed:
+    build: {context: ., dockerfile: infra/Dockerfile}
+    command: ["node", "packages/feed/src/main.ts"]
+    env_file: .local/feed.env
+    environment:
+      PDS_URL: http://pds:2583
+      FEED_ACCOUNTS_FILE: /run/prototype/accounts.json
+    volumes: ["./.local/accounts.json:/run/prototype/accounts.json:ro"]
+    ports: ["127.0.0.1:3100:3000"]
+    depends_on: [pds]
+volumes:
+  pds-data:
+  plc-data:

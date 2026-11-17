@@ -2,3 +2,8 @@
 /.worktrees/
 __pycache__/
 *.py[cod]
+.yaks/
+node_modules/
+.local/
+.env
+/compose.override.yaml

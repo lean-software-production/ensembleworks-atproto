@@ -1,0 +1,263 @@
+{
+  "lexicon": 1,
+  "id": "com.ensembleworks.session.event",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "required": [
+          "$type"
+        ],
+        "properties": {
+          "$type": {
+            "type": "string",
+            "const": "com.ensembleworks.session.event"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "const": 1
+          },
+          "harness": {
+            "type": "string",
+            "maxLength": 256
+          },
+          "sourceKind": {
+            "type": "string",
+            "const": "jsonl"
+          },
+          "streamId": {
+            "type": "string",
+            "maxLength": 128
+          },
+          "sourcePath": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "sourceLine": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sourceOrder": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "identityKind": {
+            "type": "string",
+            "enum": [
+              "native-uuid",
+              "content"
+            ]
+          },
+          "payloadEncoding": {
+            "type": "string",
+            "const": "json"
+          },
+          "payloadJson": {
+            "type": "string",
+            "maxLength": 16777216
+          },
+          "payloadDigest": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 64
+          },
+          "capturedAt": {
+            "type": "string",
+            "format": "datetime"
+          },
+          "sessionId": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "nativeId": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "nativeType": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "parentId": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "occurredAt": {
+            "type": "string",
+            "maxLength": 4096,
+            "format": "datetime"
+          },
+          "harnessVersion": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "encoding": {
+            "type": "string",
+            "const": "base64-json"
+          },
+          "digest": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 900001,
+            "maximum": 20971520
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 3,
+            "maximum": 60
+          },
+          "transportType": {
+            "type": "string",
+            "const": "com.ensembleworks.session.chunkManifest"
+          }
+        }
+      }
+    },
+    "native": {
+      "type": "object",
+      "required": [
+        "$type",
+        "schemaVersion",
+        "harness",
+        "sourceKind",
+        "streamId",
+        "sourcePath",
+        "sourceLine",
+        "sourceOrder",
+        "identityKind",
+        "payloadEncoding",
+        "payloadJson",
+        "payloadDigest",
+        "capturedAt"
+      ],
+      "properties": {
+        "$type": {
+          "type": "string",
+          "const": "com.ensembleworks.session.event"
+        },
+        "schemaVersion": {
+          "type": "integer",
+          "const": 1
+        },
+        "harness": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "sourceKind": {
+          "type": "string",
+          "const": "jsonl"
+        },
+        "streamId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "sourcePath": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "sourceLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceOrder": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "identityKind": {
+          "type": "string",
+          "enum": [
+            "native-uuid",
+            "content"
+          ]
+        },
+        "payloadEncoding": {
+          "type": "string",
+          "const": "json"
+        },
+        "payloadJson": {
+          "type": "string",
+          "maxLength": 16777216
+        },
+        "payloadDigest": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 64
+        },
+        "capturedAt": {
+          "type": "string",
+          "format": "datetime"
+        },
+        "sessionId": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "nativeId": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "nativeType": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "parentId": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "occurredAt": {
+          "type": "string",
+          "maxLength": 4096,
+          "format": "datetime"
+        },
+        "harnessVersion": {
+          "type": "string",
+          "maxLength": 4096
+        }
+      }
+    },
+    "chunkManifest": {
+      "type": "object",
+      "required": [
+        "$type",
+        "encoding",
+        "digest",
+        "bytes",
+        "count",
+        "transportType"
+      ],
+      "properties": {
+        "$type": {
+          "type": "string",
+          "const": "com.ensembleworks.session.event"
+        },
+        "encoding": {
+          "type": "string",
+          "const": "base64-json"
+        },
+        "digest": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 900001,
+          "maximum": 20971520
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 60
+        },
+        "transportType": {
+          "type": "string",
+          "const": "com.ensembleworks.session.chunkManifest"
+        }
+      }
+    }
+  }
+}

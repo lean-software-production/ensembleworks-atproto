@@ -1,0 +1,46 @@
+{
+  "lexicon": 1,
+  "id": "com.ensembleworks.session.chunkManifest",
+  "defs": {
+    "main": {
+      "type": "object",
+      "required": [
+        "$type",
+        "encoding",
+        "digest",
+        "bytes",
+        "count",
+        "transportType"
+      ],
+      "properties": {
+        "$type": {
+          "type": "string",
+          "const": "com.ensembleworks.session.event"
+        },
+        "encoding": {
+          "type": "string",
+          "const": "base64-json"
+        },
+        "digest": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 900001,
+          "maximum": 20971520
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 60
+        },
+        "transportType": {
+          "type": "string",
+          "const": "com.ensembleworks.session.chunkManifest"
+        }
+      }
+    }
+  }
+}

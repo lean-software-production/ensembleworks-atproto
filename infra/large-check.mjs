@@ -1,0 +1,10 @@
+import {readFile} from 'node:fs/promises';import assert from 'node:assert/strict';
+import {createTransport} from '@ensemble/transport';import {createEvent} from '@ensemble/protocol';
+const s=JSON.parse(await readFile('.local/accounts.json'));
+const t=n=>{const a=s.accounts.find(a=>a.name===n);return createTransport({service:s.service,space:s.space,identifier:a.handle,password:a.password})};
+const payloadJson=JSON.stringify({uuid:'large-infra-event',type:'tool_result',sessionId:'large-synthetic',content:'🦋 synthetic output '.repeat(60000)});
+const {rkey,record}=createEvent({payloadJson,sourcePath:'synthetic-large.jsonl',sourceLine:1,namespace:'infra-large-test',capturedAt:'2026-11-17T00:00:00.000Z'});
+const one=await t('alice').putEvent(rkey,record);const two=await t('alice').putEvent(rkey,record);assert.equal(one.cid,two.cid);
+let cursor,found;do{const p=await t('bob').listEvents({limit:100,cursor});found??=p.records.find(r=>r.uri===one.uri);cursor=p.cursor;}while(cursor);
+assert.deepEqual(found.value,record);assert.equal(found.value.payloadJson,payloadJson);
+console.log(JSON.stringify({passed:true,payloadBytes:Buffer.byteLength(payloadJson),uri:one.uri,cid:one.cid,checks:['same-Space chunk roundtrip','exact Unicode native JSON','manifest and chunk retry idempotence','cross-person reconstruction']}));

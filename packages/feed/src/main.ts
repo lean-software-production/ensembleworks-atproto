@@ -1,0 +1,11 @@
+import {readFile} from 'node:fs/promises';
+import {createTransport} from '@ensemble/transport';
+import {createFeedServer} from './server.ts';
+const env = process.env;
+const accounts = env.FEED_ACCOUNTS_FILE ? JSON.parse(await readFile(env.FEED_ACCOUNTS_FILE,'utf8')) : undefined;
+const reader = accounts?.accounts?.find((a:any)=>a.name==='company');
+const required = (key:string,fallback?:string)=>{const value=env[key]||fallback;if(!value)throw new Error(`${key} required`);return value;};
+const transport = createTransport({service:required('PDS_URL',accounts?.service),identifier:required('PDS_IDENTIFIER',reader?.handle),password:required('PDS_PASSWORD',reader?.password),space:required('COMPANY_SPACE',accounts?.space),collection:env.PDS_COLLECTION});
+const names = Object.fromEntries((accounts?.accounts||[]).map((a:any)=>[a.did,a.name]));
+const server = createFeedServer({transport,names,password:required('FEED_LOGIN_PASSWORD'),secret:required('FEED_SESSION_SECRET'),secureCookie:env.FEED_SECURE_COOKIE==='true'});
+server.listen(Number(env.PORT||3000),env.HOST||'0.0.0.0',()=>console.log(`Company feed listening on port ${env.PORT||3000}`));

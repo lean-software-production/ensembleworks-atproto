@@ -1,0 +1,18 @@
+{
+  "name": "@ensemble/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/watcher.ts"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@ensemble/protocol": "0.0.1",
+    "@ensemble/transport": "0.0.1"
+  }
+}

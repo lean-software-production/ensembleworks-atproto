@@ -1,0 +1,39 @@
+{
+  "lexicon": 1,
+  "id": "com.ensembleworks.session.chunk",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "required": [
+          "$type",
+          "digest",
+          "index",
+          "data"
+        ],
+        "properties": {
+          "$type": {
+            "type": "string",
+            "const": "com.ensembleworks.session.chunk"
+          },
+          "digest": {
+            "type": "string",
+            "minLength": 64,
+            "maxLength": 64
+          },
+          "index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 59
+          },
+          "data": {
+            "type": "string",
+            "maxLength": 466668
+          }
+        }
+      }
+    }
+  }
+}

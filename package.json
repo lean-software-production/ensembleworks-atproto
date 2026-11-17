@@ -1,0 +1,31 @@
+{
+  "name": "ensembleworks-atproto-prototype",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "bootstrap": "node infra/bootstrap.mjs",
+    "up": "node infra/up.mjs",
+    "test:transport:live": "node infra/transport-check.mjs",
+    "test:transport:large": "node infra/large-check.mjs",
+    "demo:seed": "node infra/demo.mjs seed",
+    "demo:once": "node infra/demo.mjs once",
+    "demo:watch": "node infra/demo.mjs watch",
+    "demo:append": "node infra/demo.mjs append"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@did-plc/server": "0.0.1"
+  }
+}

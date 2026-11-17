@@ -1,0 +1,10 @@
+{"type":"user","uuid":"u1","sessionId":"synthetic-session","parentUuid":null,"timestamp":"2026-11-17T00:00:00Z","version":"2.1.325","message":{"role":"user","content":"Build a synthetic demo"}}
+{"type":"assistant","uuid":"a1","sessionId":"synthetic-session","parentUuid":"u1","message":{"role":"assistant","content":[{"type":"thinking","thinking":"Synthetic summary"},{"type":"tool_use","id":"tool1","name":"Read","input":{"file_path":"demo.txt"}}]},"usage":{"input_tokens":12}}
+{"type":"user","uuid":"r1","sessionId":"synthetic-session","parentUuid":"a1","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"tool1","content":"Synthetic output"}]}}
+{"type":"custom-title","sessionId":"synthetic-session","customTitle":"Fixture session"}
+{"type":"ai-title","sessionId":"synthetic-session","aiTitle":"Generated fixture title"}
+{"type":"system","uuid":"c1","sessionId":"synthetic-session","subtype":"compact_boundary","compactMetadata":{"trigger":"auto","preTokens":100}}
+{"type":"assistant","uuid":"branch1","sessionId":"synthetic-session","parentUuid":"u1","isSidechain":true,"agentId":"agent-demo","message":{"content":"Branch"}}
+{"type":"future-new-event","uuid":"unknown1","sessionId":"synthetic-session","data":{"hugeInteger":900719925474099312345,"nullable":null,"nested":[true,4.500]}}
+{"type":"file-history-snapshot","messageId":"u1","snapshot":{"trackedFileBackups":{}}}
+{"type":"progress","uuid":"p1","data":{"type":"hook_progress","status":"finished"}}
